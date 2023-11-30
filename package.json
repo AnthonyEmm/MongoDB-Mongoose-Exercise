@@ -1,0 +1,21 @@
+{
+  "name": "mongodb-mongoose-exercise",
+  "version": "1.0.0",
+  "description": "The exercise focuses on the opportunity to practice using Mongoose, a flexible MongoDB object modeling (ODM) library for Nodejs. Focusing on implementing CRUD (Create, Read, Update, Delete) operations and exploring the concept of referencing other documents within a MongoDB database.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.2"
+  }
+}
