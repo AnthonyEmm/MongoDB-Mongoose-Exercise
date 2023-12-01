@@ -6,7 +6,7 @@ const getUsers = async (req, res) => {
     const user = await User.find({});
     res.json(user);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send("Oops! No users were found");
   }
 };
@@ -18,7 +18,7 @@ const getUser = async (req, res) => {
     const user = await User.findOne({ _id: id });
     res.json(user);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send("Oops! No users were found");
   }
 };

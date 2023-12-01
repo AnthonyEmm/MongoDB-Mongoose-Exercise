@@ -23,7 +23,7 @@ const getEvents = async (req, res) => {
     const event = await Event.find({});
     res.json(event);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send("Oops! No users were found");
   }
 };
@@ -35,7 +35,7 @@ const getEvent = async (req, res) => {
     const event = await Event.findById(id).populate("organizer");
     res.json(event);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send("Oops! No users were found");
   }
 };
