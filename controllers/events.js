@@ -46,11 +46,12 @@ const joinEvent = async (req, res) => {
     const { id } = req.params;
     const { userId } = req.body;
 
-    const event = await Event.findById(id);
-    event.attendees.push(userId);
-
-    const result = await event.save();
-    res.json(result);
+    const event = await Event.updateOne(
+      { _id: id },
+      { $push: { attendees: userId } },
+    );
+    // const result = await event.save();
+    res.json(event);
   } catch (error) {
     console.log(error);
     res.status(500).send("Oops! No users were found");
